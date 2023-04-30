@@ -12,5 +12,5 @@ wg-quick up /etc/wireguard/wg0.conf
 sleep infinity &
 
 # healthcheck
-python3 wireguard_healthcheck.py
+python3 wireguard_healthcheck.py & 
 wait $!
