@@ -8,5 +8,7 @@ RUN apk update && \
   apk add python3 curl && \
   chmod +x entrypoint.sh wireguard_healthcheck.py
 
+VOLUME [ "/etc/wireguard" ]
 
 EXPOSE 51820/UDP 8080/TCP
+

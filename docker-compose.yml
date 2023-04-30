@@ -1,9 +1,13 @@
 version: "3.5"
 services:
   wireguard:
-    image: eftechcombr/wireguard:latest
+    image: eftechcombr/wireguard:dev
     build: . 
+    cap_add:
+      - NET_ADMIN
+    volumes: 
+      - ./etc:/etc/wireguard:rw
     ports: 
       - "51820:51820/UDP"
       - "8080:8080"
-    
+
