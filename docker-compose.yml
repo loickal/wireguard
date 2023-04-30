@@ -1,0 +1,9 @@
+version: "3.5"
+services:
+  wireguard:
+    image: eftechcombr/wireguard:latest
+    build: . 
+    ports: 
+      - "51820:51820/UDP"
+      - "8080:8080"
+    
