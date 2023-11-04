@@ -5,8 +5,11 @@ services:
     build: . 
     cap_add:
       - NET_ADMIN
+    sysctls:
+     - net.ipv4.ip_forward=1
     volumes: 
-      - ./etc:/etc/wireguard:rw
+      - /dev/net/tun:/dev/net/tun
+      - ./etc:/etc/wireguard:rw 
     ports: 
       - "51820:51820/UDP"
       - "8080:8080"
