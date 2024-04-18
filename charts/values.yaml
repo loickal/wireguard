@@ -16,8 +16,10 @@ config:
   peers: 
   - publickey: "0oqojqQvGR9OIGG/L7yXBrOqzQrDkQiIAh7zw0F0tC8="
     allowedips: 10.100.200.2/32
+    name: Foo 
   - publickey: "7dCTaAJQw2CZr/PJhaLHvjFcOwkWkvfPc6JnZV/bUSM="
     allowedips: 10.100.200.3/32
+    name: Bar
 
 
 wireguard: 

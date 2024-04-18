@@ -13,6 +13,7 @@ data:
     #
     {{- range $peer := .Values.config.peers }} 
     #
+    # name: {{ $peer.name | replace " " "-" }}
     [Peer]
     PublicKey = {{ $peer.publickey }}
     AllowedIPs = {{ $peer.allowedips }} 
